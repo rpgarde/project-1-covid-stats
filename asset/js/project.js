@@ -7,24 +7,25 @@ fetch("https://covid-19-data.p.rapidapi.com/country?name=italy", {
 })
 
 
-.then(function (response) { 
-    return response.json()})
-.then(function (data) {  
-        console.log(data)
-        console.log(data)
-const  name  = data
- const  confirmed = data[0].confirmed
-const  recovered  = data[0].recovered;
-const  critical  = data[0].critical;
-const  deaths  = data[0].deaths;
-document.querySelector("#confirmed-number").innerHTML =  confirmed;
-document.querySelector("#recovered-number").innerHTML = recovered;
-document.querySelector("#critical-number").innerHTML =  critical;
-document.querySelector("#deaths-number").innerHTML = deaths;
-console.log(data[0])
-    });
+	.then(function (response) {
+		return response.json()
+	})
+	.then(function (data) {
+		console.log(data)
+		console.log(data)
+		const name = data
+		const confirmed = data[0].confirmed
+		const recovered = data[0].recovered;
+		const critical = data[0].critical;
+		const deaths = data[0].deaths;
+		document.querySelector("#confirmed-number").innerHTML = confirmed;
+		document.querySelector("#recovered-number").innerHTML = recovered;
+		document.querySelector("#critical-number").innerHTML = critical;
+		document.querySelector("#deaths-number").innerHTML = deaths;
+		console.log(data[0])
+	});
 
 var search = function () {
-this.getdata(document.querySelector(".search-bar").value);
+	this.getdata(document.querySelector(".search-bar").value);
 }
 
