@@ -1,48 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="asset/css/style.css" />
     <title>COVID Tracker</title>
 </head>
+
 <body>
-<header>Placeholder for image</header>
-<form id="search">
-    <label for="input">Country</label>
-    <input type="text" id="input" name = "input">
-    <button id="submit">Submit</button>
-<article>
-    <section id="description">Showing results for <span id="country-name">all countries</span></section>
-    <section id="confirmed">
-        <section id="confirmed-number">
-            1000
-        </section>
-        Confirmed
-    </section>
-    <section id="recovered">
-        <section id="recovered-number">
-            1000
-        </section>
-        Confirmed
-    </section>
-    <section id="critical">
-        <section id="critical-number">
-            1000
-        </section>
-        Confirmed
-    </section>
-    <section id="deaths">
-        <section id="deaths-number">
-            1000
-        </section>
-        Confirmed
-    </section>
-</article>    
+    <div class="container">
 
-</form>
+        <div class="header-container hero is-medium">
+            <div class="hero-body">
+                <form id="search" class="field is-flex-direction-column">
+                    <label class="hero-text" for="input">COVID-19 statistics from around the globe</label>
+                    <div class="columns is-vcentered">
+                        <div class="column is-5">
+                            <div class="control">
+                                <input class="input is-large" type="text" id="input" name="input"
+                                    placeholder="Enter a country">
+                            </div>
+                        </div>
+                        <button class="button" id="submit">
+                            <span class="material-icons-outlined">
+                                search
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <article class="content-container">
 
-<script src = "asset/js/project.js"></script>
+            <br>
+            <br>
+            <section class="results" id="description">Showing results for
+                <span id="country-name" class="country-name">all countries</span>
+            </section>
+
+            <br>
+            <br>
+
+            <div class="columns is-justify-content-space-evenly has-text-centered">
+                <section id="confirmed" class="column is-3">
+                    <div class="box m-3">
+                        <section id="confirmed-number" class="is-size-2 has-text-weight-bold">
+                            1000
+                        </section>
+                        Confirmed
+                    </div>
+                </section>
+
+                <section id="recovered" class="column is-3">
+                    <div class="box m-3">
+                        <section id="recovered-number" class="is-size-2 has-text-weight-bold">
+                            1000
+                        </section>
+                        Recovered
+                    </div>
+                </section>
+
+                <section id="critical" class="column is-3">
+                    <div class="box m-3">
+                        <section id="critical-number" class="is-size-2 has-text-weight-bold">
+                            1,000,000
+                        </section>
+                        Critical
+                    </div>
+                </section>
+
+                <section id="deaths" class="column is-3">
+                    <div class="box m-3">
+                        <section id="deaths-number" class="is-size-2 has-text-weight-bold has-text-danger">
+                            1000
+                        </section>
+                        Deaths
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+    <script src="asset/js/project.js"></script>
 </body>
+
 </html>
