@@ -1,0 +1,31 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header-container {
+    background: #ffffff url("../images/header-image.jpeg") no-repeat right top;
+    background-size: cover;
+}
+
+.hero-text {
+    font-weight: 700;
+    font-size: 24px;
+    color: #083d5d;
+}
+
+.content-container {
+    background-color: rgba(8, 61, 93, 0.2);
+    padding-bottom: 60px;
+}
+
+.results {
+    font-size: 25px;
+    text-align: center;
+}
+
+.country-name {
+    font-weight: 700;
+}
