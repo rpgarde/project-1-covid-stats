@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="asset/css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css">
     <title>COVID Tracker</title>
 </head>
 
@@ -16,7 +17,7 @@
         <div class="header-container hero is-medium">
             <div class="hero-body">
                 <form id="search" class="field is-flex-direction-column">
-                    <label class="hero-text" for="input">COVID-19 statistics from around the globe</label>
+                    <label class="hero-text" for="input"><span class="covid-19">COVID-19</span><br>Statistics from around the globe</label>
                     <div class="columns is-vcentered">
                         <div class="column is-5">
                             <div class="control">
@@ -25,7 +26,7 @@
                             </div>
                         </div>
                         <button class="button" id="submit">
-                            <span class="material-icons-outlined">
+                            <span class="material-icons">
                                 search
                             </span>
                         </button>
@@ -38,7 +39,8 @@
             <br>
             <br>
             <section class="results" id="description">Showing results for
-                <span id="country-name" class="country-name">all countries</span>
+                <span id="country-name" class="country-name">all countries</span>. Data accurate as of 
+                <span id="date"></span>.
             </section>
 
             <br>
@@ -47,8 +49,7 @@
             <div class="columns is-justify-content-space-evenly has-text-centered">
                 <section id="confirmed" class="column is-3">
                     <div class="box m-3">
-                        <section id="confirmed-number" class="is-size-2 has-text-weight-bold">
-                            1000
+                        <section id="confirmed-number" class="is-size-3 is-size-4-tablet has-text-weight-bold stats">
                         </section>
                         Confirmed
                     </div>
@@ -56,8 +57,7 @@
 
                 <section id="recovered" class="column is-3">
                     <div class="box m-3">
-                        <section id="recovered-number" class="is-size-2 has-text-weight-bold">
-                            1000
+                        <section id="recovered-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-success-dark">
                         </section>
                         Recovered
                     </div>
@@ -65,8 +65,7 @@
 
                 <section id="critical" class="column is-3">
                     <div class="box m-3">
-                        <section id="critical-number" class="is-size-2 has-text-weight-bold">
-                            1,000,000
+                        <section id="critical-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-warning-dark">
                         </section>
                         Critical
                     </div>
@@ -74,15 +73,19 @@
 
                 <section id="deaths" class="column is-3">
                     <div class="box m-3">
-                        <section id="deaths-number" class="is-size-2 has-text-weight-bold has-text-danger">
-                            1000
+                        <section id="deaths-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-danger-dark">
                         </section>
                         Deaths
                     </div>
                 </section>
             </div>
+            <div style="text-align: center;">
+            <button class ="button is-primary" id = "reset">Reset to All Countries</button> 
+            </div>
         </article>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="asset/js/project.js"></script>
 </body>
 
