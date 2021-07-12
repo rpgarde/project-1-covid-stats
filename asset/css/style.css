@@ -1,5 +1,7 @@
+/* DARK BLUE - #083d5d */
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,800;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -11,9 +13,11 @@ body {
 }
 
 .hero-text {
-    font-weight: 700;
-    font-size: 24px;
-    color: #083d5d;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 4px #1a104e;
 }
 
 .content-container {
@@ -28,4 +32,16 @@ body {
 
 .country-name {
     font-weight: 700;
+}
+
+#date {
+    font-weight: 700;
+}
+
+.covid-19 {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    text-shadow: 1px 1px 4px #1a104e;
 }
