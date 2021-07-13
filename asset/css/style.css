@@ -28,6 +28,7 @@ body {
 .results {
     font-size: 25px;
     text-align: center;
+    color: black;
 }
 
 .country-name {
