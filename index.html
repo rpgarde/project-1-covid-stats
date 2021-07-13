@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <title>COVID Tracker</title>
 </head>
-
 <body>
+<!-- ********** MODAL CONTAINER ********** -->
     <div class="container">
-
-        <div class="header-container hero is-medium">
-            <div class="hero-body">
+        <div class="modal is-clipped" id = "page-modal">
+            <div class="modal-background is-clipped"></div>
+            <div class="modal-content is-clipped">
                 <form id="search" class="field is-flex-direction-column">
-                    <label class="hero-text" for="input"><span class="covid-19">COVID-19</span><br>Statistics from around the globe</label>
                     <div class="columns is-vcentered">
-                        <div class="column is-5">
+                        <div class="column is-11">
                             <div class="control">
                                 <input class="input is-large" type="text" id="input" name="input"
                                     placeholder="Enter a country">
                             </div>
                         </div>
-                        <button class="button" id="submit">
+                        <button class="button is-primary" id="submit">
                             <span class="material-icons">
                                 search
                             </span>
@@ -33,23 +32,29 @@
                     </div>
                 </form>
             </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+        <div class="header-container hero is-medium">
+            <div class="hero-body">
+                <h1 class="hero-text" for="input"><span class="covid-19">COVID-19</span><br>Statistics from around the globe</h1>
+                <button class ="button is-warning is-large" id = "start">Start here</button> 
+            </div>
         </div>
         <article class="content-container">
-
             <br>
             <br>
+<!-- ********** CHOSEN COUNTRY DISPLAYED HERE ********** -->
             <section class="results" id="description">Showing results for
                 <span id="country-name" class="country-name">all countries</span>. Data accurate as of 
                 <span id="date"></span>.
             </section>
-
             <br>
             <br>
-
+<!-- ********** DATA FOR COUNTRY DISPLAYED HERE ********** -->
             <div class="columns is-justify-content-space-evenly has-text-centered">
                 <section id="confirmed" class="column is-3">
                     <div class="box m-3">
-                        <section id="confirmed-number" class="is-size-3 is-size-4-tablet has-text-weight-bold stats">
+                        <section id="confirmed-number" class="is-size-3 is-size-5-tablet has-text-weight-bold stats">
                         </section>
                         Confirmed
                     </div>
@@ -57,7 +62,7 @@
 
                 <section id="recovered" class="column is-3">
                     <div class="box m-3">
-                        <section id="recovered-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-success-dark">
+                        <section id="recovered-number" class="is-size-3 is-size-5-tablet has-text-weight-bold has-text-success-dark">
                         </section>
                         Recovered
                     </div>
@@ -65,7 +70,7 @@
 
                 <section id="critical" class="column is-3">
                     <div class="box m-3">
-                        <section id="critical-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-warning-dark">
+                        <section id="critical-number" class="is-size-3 is-size-5-tablet has-text-weight-bold">
                         </section>
                         Critical
                     </div>
@@ -73,14 +78,15 @@
 
                 <section id="deaths" class="column is-3">
                     <div class="box m-3">
-                        <section id="deaths-number" class="is-size-3 is-size-4-tablet has-text-weight-bold has-text-danger-dark">
+                        <section id="deaths-number" class="is-size-3 is-size-5-tablet has-text-weight-bold has-text-danger-dark">
                         </section>
                         Deaths
                     </div>
                 </section>
             </div>
             <div style="text-align: center;">
-            <button class ="button is-primary" id = "reset">Reset to All Countries</button> 
+<!-- ********** RESET BUTTON ********** -->
+                <button class ="button is-primary is-large" id = "reset">Reset to All Countries</button> 
             </div>
         </article>
     </div>
