@@ -1,12 +1,15 @@
-/* DARK BLUE - #083d5d */
-
+/* ---------- EXTERNAL IMPORTS ---------- */
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,800;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
+/* ---------- GLOBAL STYLES ---------- */
 body {
     font-family: 'Quicksand', sans-serif;
 }
 
+
+/* ---------- HEADER STYLES ---------- */
 .header-container {
     background: #ffffff url("../images/header-image.jpeg") no-repeat right top;
     background-size: cover;
@@ -25,6 +28,8 @@ body {
     padding-bottom: 60px;
 }
 
+/* ---------- COUNTRY DATA ---------- */
+
 .results {
     font-size: 25px;
     text-align: center;
@@ -39,10 +44,22 @@ body {
     font-weight: 700;
 }
 
+#critical-number {
+    color: #FBB917;
+}
+
 .covid-19 {
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     font-size: 24px;
     text-shadow: 1px 1px 4px #1a104e;
+}
+
+/* ---------- MODAL STYLES ---------- */
+
+.modal-content {
+    background-color: rgb(206, 197, 197); 
+    padding: 50px;
+    margin-top: 300px;
 }

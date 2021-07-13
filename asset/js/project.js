@@ -1,4 +1,6 @@
+// Pulls country from local storage
 var pulledCountry = localStorage.getItem("storedCountry")
+// If there was a country pulled, create a var equal to that pulled country, otherwise create an empty var
 if(pulledCountry){
 	var currentCountry = pulledCountry
 }
@@ -6,11 +8,32 @@ else {
 	var currentCountry
 }
 
-var submitBtn = document.querySelector("#submit")
-var countrySpan = document.querySelector("#country-name")
-var dateSpan = document.querySelector("#date")
-var resetBtn = document.querySelector("#reset")
+// Declare variables 
+var submitBtn = document.querySelector("#submit"); 
+var countrySpan = document.querySelector("#country-name");
+var dateSpan = document.querySelector("#date"); 
+var resetBtn = document.querySelector("#reset"); 
+var startBtn = document.querySelector("#start");
+var modal = document.querySelector("#page-modal");
+var close = document.querySelector(".modal-close");
 
+// Modal functionality
+startBtn.onclick = function() {
+	modal.style.display = 'block';
+}
+
+close.onclick = function() {
+	modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+	console.log("i have clicked the grey part")
+	console.log(event.target.className)
+	if (event.target.className == 'modal-background is-clipped'){
+		modal.style.display = 'none';
+	}
+}
+// Fetch global covid statistics from Rapid API
 function fetchAll(){
 	fetch("https://covid-19-data.p.rapidapi.com/totals", {
 		"method": "GET",
@@ -46,6 +69,7 @@ function fetchAll(){
 		});
 }
 
+// Fetch individual country covid data from rapid API
 function fetchData(){
 	fetch("https://covid-19-data.p.rapidapi.com/country?name=" + currentCountry, {
 		"method": "GET",
@@ -85,17 +109,20 @@ function fetchData(){
 		});
 }
 
+// Send the user input to the fetch (for country search)
 function updateData(){
 	currentCountry = document.querySelector("#input").value;
 	countrySpan.innerHTML = currentCountry;
 	fetchData();
 }
-
+ // Search button - updates the data + closes the modal
 submitBtn.addEventListener('click',function(event){
 	event.preventDefault();
-	updateData()
+	updateData();
+	modal.style.display = 'none';
 })
 
+// Reset the data to global when the reset button is clicked
 resetBtn.addEventListener('click',function(event){
 	event.preventDefault();
 	fetchAll();
@@ -103,6 +130,7 @@ resetBtn.addEventListener('click',function(event){
 	localStorage.clear();
 })
 
+// init function runs upon page load
 function init(){
 	if(currentCountry){
 		fetchData()
