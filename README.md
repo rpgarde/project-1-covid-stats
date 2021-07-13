@@ -5,3 +5,5 @@ Link to project proposal [here](https://docs.google.com/document/d/1H_ldeklY8G99
 project
 
 TEST MERGE CONFLICT - PAOLO 
+TEST - RESOLVED MERGE
+TEST MERGE CONFLICT - STEPH
