@@ -49,7 +49,7 @@ Opening the page displays global stats
 ![Screenshot for our project](./asset/images/project-screenshot.PNG)
 
 Clicking start here pops up a modal which lets you search a country
-![Screenshot for the modal](./asset/images/modal-screenshot.PNG)
+![Screenshot for the modal](./asset/images/modal-screenshot.png)
 
 ## Developed by 
 * [Ahrum Noh](https://github.com/ahrumnoh)
