@@ -45,4 +45,14 @@ Given I am using the COVID tracker to find out information about a country...
 
 Check out our project [HERE](https://rpgarde.github.io/project-1-covid-stats/).
 
-![Screenshot for our project](/asset/images/project-screenshot.PNG)
+Opening the page displays global stats
+![Screenshot for our project](./asset/images/project-screenshot.PNG)
+
+Clicking start here pops up a modal which lets you search a country
+![Screenshot for the modal](./asset/images/modal-screenshot.PNG)
+
+## Developed by 
+* [Ahrum Noh](https://github.com/ahrumnoh)
+* [Paolo Garde](https://github.com/rpgarde)
+* [Robert Walker](https://github.com/Walker123-coder/) 
+* [Steph Melanofridis](https://github.com/stephmelanofridis)
